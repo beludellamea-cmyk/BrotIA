@@ -13,7 +13,16 @@ de cuatro clases con autoevaluación y emite un certificado en PDF a nombre de *
   el curso pero no recibe certificado. Los datos no se guardan.
 - Conversación sobre huerta con IA (opcional), apoyada en `datos/calendario_siembra.csv`.
 
-## Interfaz web
+## Versión estática (GitHub Pages)
+La carpeta `docs/` contiene una versión que **no necesita servidor**: asistente, capacitación, autoevaluación y
+certificado en PDF funcionan en el navegador (jsPDF incluido en `docs/js/`). Se publica con GitHub Pages
+(Settings → Pages → Deploy from a branch → `main` / `/docs`).
+- El asistente responde solo con lo que hay en `datos/calendario_siembra.csv` y en las clases; no usa IA ni claves.
+- Si se edita el CSV, hay que regenerar `docs/js/datos.js`.
+- El certificado estático no lleva código de verificación ni QR (requieren una clave secreta que no puede vivir en una página estática) ni imágenes de firma.
+- Los datos personales no salen del dispositivo.
+
+## Interfaz web (versión con servidor Flask)
 ```bash
 flask --app web.app run
 ```

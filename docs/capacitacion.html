@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Capacitación · BrotIA</title>
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header>
+  <img src="img/logo.png" alt="Logo de BrotIA">
+  <div>
+    <h1><span class="brot">Brot</span><span class="ia">IA</span></h1>
+    <p>Conectando naturaleza y tecnología</p>
+  </div>
+  <nav><a href="index.html">Consultas</a><a href="capacitacion.html">Capacitación</a></nav>
+</header>
+<main>
+<section class="panel">
+  <h2>Capacitación en Huerta Agroecológica</h2>
+  <div id="clases"></div>
+</section>
+
+<section class="panel" id="eval">
+  <h2>Autoevaluación</h2>
+  <form id="quiz">
+    <button type="submit">Enviar respuestas</button>
+  </form>
+  <p id="resultado"></p>
+</section>
+
+<section class="panel oculto" id="datos">
+  <h2>Tu certificado</h2>
+  <div class="aviso">AVISO SOBRE TUS DATOS PERSONALES
+Para emitir tu certificado necesitamos tu NOMBRE COMPLETO y tu DNI.
+- Para qué: únicamente para escribirlos en el certificado en PDF.
+- Es voluntario: podés negarte. Si no los das, podés seguir usando BrotIA y hacer la capacitación, pero no se emite el certificado.
+- No los guardamos ni los enviamos: el PDF se genera en tu propio navegador y queda solo en tu dispositivo. Esta página no tiene servidor que reciba tus datos.
+- No los compartimos con terceros.</div>
+  <p><button type="button" id="si">Acepto dar mis datos</button>
+     <button type="button" class="sec" id="no">No, gracias</button></p>
+  <p id="rechazo" class="oculto">Entendido, no te pedimos ningún dato y no se emite certificado. Podés volver cuando quieras.</p>
+  <form id="formdatos" class="oculto">
+    <p><input type="text" id="nombre" placeholder="Nombre y apellido completos" required maxlength="80" autocomplete="name"></p>
+    <p><input type="text" id="dni" placeholder="DNI (solo números)" required maxlength="12" inputmode="numeric"></p>
+    <button type="submit">Descargar certificado (PDF)</button>
+  </form>
+  <p id="msgdatos"></p>
+</section>
+</main>
+<script src="js/jspdf.umd.min.js"></script>
+<script src="js/capacitacion.js"></script>
+</body>
+</html>

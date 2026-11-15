@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BrotIA · Asistente de huerta</title>
+<link rel="icon" href="img/logo.png">
+<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+<header>
+  <img src="img/logo.png" alt="Logo de BrotIA">
+  <div>
+    <h1><span class="brot">Brot</span><span class="ia">IA</span></h1>
+    <p>Conectando naturaleza y tecnología</p>
+  </div>
+  <nav><a href="index.html">Consultas</a><a href="capacitacion.html">Capacitación</a></nav>
+</header>
+<main>
+<section class="panel">
+  <h2>Preguntale a BrotIA sobre tu huerta</h2>
+  <div id="chat" aria-live="polite"></div>
+  <div id="sugerencias" class="chips"></div>
+  <form class="fila" id="form">
+    <input type="text" id="mensaje" placeholder="Ej.: ¿Qué puedo sembrar ahora?" maxlength="300" required>
+    <button type="submit">Enviar</button>
+  </form>
+  <p><small>Las fechas del calendario son nacionales (ProHuerta) y deben ajustarse al clima de Formosa y Chaco.
+  La luna y el viento se presentan como saberes tradicionales, no como reglas garantizadas.
+  BrotIA funciona en tu navegador: no envía lo que escribís a ningún servidor.</small></p>
+</section>
+</main>
+<script src="js/datos.js"></script>
+<script src="js/asistente.js"></script>
+</body>
+</html>
